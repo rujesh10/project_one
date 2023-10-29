@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "368915940267",
+    "project_id": "projectone-1d20e",
+    "storage_bucket": "projectone-1d20e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368915940267:android:c8d9ec836dd33d92c7c8ee",
+        "android_client_info": {
+          "package_name": "com.nextstep.project_one"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZBlTP8mo8k0f4_1GTrYB_DXMDbuEKHkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
