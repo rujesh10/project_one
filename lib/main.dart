@@ -1,6 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:project_one/screens/home_screen.dart';
 import 'package:project_one/screens/login_screen.dart';
+import 'package:project_one/screens/splash_screen.dart';
 import 'package:project_one/utils/bottom_nav.dart';
 
 import 'firebase_options.dart';
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: const HomeScreen(),
     );
   }
 }
