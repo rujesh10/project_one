@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+
+import 'package:project_one/screens/profile.dart';
 import 'package:project_one/screens/wallet.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -24,29 +27,46 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          "Welcome",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w900,
-                              fontSize: 30,
-                              fontFamily: 'Nunito'),
+                      children: [
+                        Animate(
+                          effects: const [FadeEffect(), SlideEffect()],
+                          child: const Text(
+                            "Welcome",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 30,
+                                fontFamily: 'Jost'),
+                          ),
                         ),
-                        Text(
-                          "to QR Wallet",
-                          style: TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.w900,
-                              fontFamily: 'Nunito'),
+                        Animate(
+                          effects: const [FadeEffect(), SlideEffect()],
+                          child: const Text(
+                            "to Qr Wallet",
+                            style: TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Jost'),
+                          ),
                         )
                       ],
                     ),
                     const SizedBox(
                       width: 110,
                     ),
-                    const CircleAvatar(
-                      backgroundImage: AssetImage("assets/images/profile.jpg"),
-                      radius: 25,
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Profile(),
+                            ));
+                      },
+                      child: const CircleAvatar(
+                        backgroundColor: Colors.white,
+                        backgroundImage:
+                            AssetImage("assets/images/profile.jpg"),
+                        radius: 25,
+                      ),
                     ),
                     const SizedBox(
                       width: 10,
@@ -54,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Padding(
@@ -65,12 +85,19 @@ class _HomeScreenState extends State<HomeScreen> {
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
-                    contentPadding: EdgeInsets.all(12.0),
+                    contentPadding: const EdgeInsets.all(12.0),
                   ),
                 ),
               ),
-              SizedBox(
-                height: 60,
+              const SizedBox(
+                height: 30,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [],
+              ),
+              const SizedBox(
+                height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -111,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 30,
                   ),
                   InkWell(
@@ -162,7 +189,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               Row(
@@ -204,7 +231,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 30,
                   ),
                   Container(
@@ -245,6 +272,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
+              SizedBox(
+                height: 100,
+              ),
+              Column(
+                children: [
+                  SizedBox(
+                    height: 100,
+                  ),
+                  Text(
+                    "@ 2024 Nepal,Inc. All rights reserved ",
+                    style: TextStyle(color: Colors.grey),
+                  )
+                ],
+              )
             ],
           ),
         ),
