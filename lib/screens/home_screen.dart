@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 import 'package:project_one/screens/profile.dart';
+import 'package:project_one/screens/scanner.dart';
 import 'package:project_one/screens/wallet.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -102,40 +103,50 @@ class _HomeScreenState extends State<HomeScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    width: 150,
-                    height: 150,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(15.0),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 5,
-                          blurRadius: 7,
-                          offset: Offset(0, 3),
-                        ),
-                      ],
-                    ),
-                    child: Column(
-                      children: const [
-                        SizedBox(
-                          height: 30,
-                        ),
-                        CircleAvatar(
-                          // backgroundColor: Colors.purple,
-                          child: Icon(Icons.qr_code),
-                          radius: 30,
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "SCAN",
-                          style: TextStyle(
-                              fontFamily: "Heebo", fontWeight: FontWeight.bold),
-                        )
-                      ],
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ScanQr(),
+                          ));
+                    },
+                    child: Container(
+                      width: 150,
+                      height: 150,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15.0),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 5,
+                            blurRadius: 7,
+                            offset: Offset(0, 3),
+                          ),
+                        ],
+                      ),
+                      child: Column(
+                        children: const [
+                          SizedBox(
+                            height: 30,
+                          ),
+                          CircleAvatar(
+                            // backgroundColor: Colors.purple,
+                            child: Icon(Icons.qr_code),
+                            radius: 30,
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            "SCAN",
+                            style: TextStyle(
+                                fontFamily: "Heebo",
+                                fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(

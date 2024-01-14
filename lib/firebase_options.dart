@@ -44,38 +44,37 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyB4lvAcqTshTKEBdXbyt9woRlTWRGPMQ6Q',
-    appId: '1:368915940267:web:15d7c3f1f4ae8c82c7c8ee',
-    messagingSenderId: '368915940267',
-    projectId: 'projectone-1d20e',
-    authDomain: 'projectone-1d20e.firebaseapp.com',
-    storageBucket: 'projectone-1d20e.appspot.com',
-    measurementId: 'G-SFRJNTWG88',
+    apiKey: 'AIzaSyBXL1RW5ZwVztQHLfDouFcLwm6zTHkrDYc',
+    appId: '1:972687008586:web:86c7f16a003241c3eb97b3',
+    messagingSenderId: '972687008586',
+    projectId: 'projectone-86cbb',
+    authDomain: 'projectone-86cbb.firebaseapp.com',
+    storageBucket: 'projectone-86cbb.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBZBlTP8mo8k0f4_1GTrYB_DXMDbuEKHkM',
-    appId: '1:368915940267:android:c8d9ec836dd33d92c7c8ee',
-    messagingSenderId: '368915940267',
-    projectId: 'projectone-1d20e',
-    storageBucket: 'projectone-1d20e.appspot.com',
+    apiKey: 'AIzaSyAr-RbgOmNPnM7vMBZEcbtz5S4S6VebRGA',
+    appId: '1:972687008586:android:c9dc5a3cecc0a75deb97b3',
+    messagingSenderId: '972687008586',
+    projectId: 'projectone-86cbb',
+    storageBucket: 'projectone-86cbb.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyB3_2rKnx3cZZeE6RDu0vwcdD31rul4ncU',
-    appId: '1:368915940267:ios:92c97f4b359ab660c7c8ee',
-    messagingSenderId: '368915940267',
-    projectId: 'projectone-1d20e',
-    storageBucket: 'projectone-1d20e.appspot.com',
+    apiKey: 'AIzaSyCDyHIUu7eEThLZcxyfKKODPwYdvCJOGKE',
+    appId: '1:972687008586:ios:63ab4b29acb7e09aeb97b3',
+    messagingSenderId: '972687008586',
+    projectId: 'projectone-86cbb',
+    storageBucket: 'projectone-86cbb.appspot.com',
     iosBundleId: 'com.example.projectOne',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyB3_2rKnx3cZZeE6RDu0vwcdD31rul4ncU',
-    appId: '1:368915940267:ios:92c97f4b359ab660c7c8ee',
-    messagingSenderId: '368915940267',
-    projectId: 'projectone-1d20e',
-    storageBucket: 'projectone-1d20e.appspot.com',
+    apiKey: 'AIzaSyCDyHIUu7eEThLZcxyfKKODPwYdvCJOGKE',
+    appId: '1:972687008586:ios:63ab4b29acb7e09aeb97b3',
+    messagingSenderId: '972687008586',
+    projectId: 'projectone-86cbb',
+    storageBucket: 'projectone-86cbb.appspot.com',
     iosBundleId: 'com.example.projectOne',
   );
 }

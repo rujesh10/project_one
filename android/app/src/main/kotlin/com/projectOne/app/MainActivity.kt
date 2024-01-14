@@ -1,4 +1,4 @@
-package com.nextstep.project_one
+package com.projectOne.app
 
 import io.flutter.embedding.android.FlutterActivity
 
