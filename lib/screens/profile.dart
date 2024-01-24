@@ -3,13 +3,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_core/firebase_core.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:image_crop/image_crop.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:project_one/screens/add_images.dart';
+import 'package:project_one/screens/upload_screen.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -88,6 +87,11 @@ class _ProfileState extends State<Profile> {
                       const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                   child: InkWell(
                     onTap: () {
+                      // Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //       builder: (context) => UploadImages(),
+                      //     ));
                       pickImageFormGallery();
                     },
                     child: Row(
@@ -156,7 +160,7 @@ class _ProfileState extends State<Profile> {
             children: [
               IconButton(
                 onPressed: () {
-                  Navigator.pop(context); // Close the cropping UI
+                  Navigator.pop(context);
                 },
                 icon: Icon(Icons.arrow_back),
               ),
@@ -164,8 +168,7 @@ class _ProfileState extends State<Profile> {
               IconButton(
                 onPressed: () {
                   cropedImage();
-                  Navigator.pop(
-                      context); // Close the cropping UI after cropping
+                  Navigator.pop(context);
                 },
                 icon: Icon(
                   Icons.check,

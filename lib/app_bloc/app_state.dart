@@ -2,10 +2,13 @@ import 'package:equatable/equatable.dart';
 
 abstract class AppState {}
 
-abstract class AppInitialState extends AppState {}
+class AppInitialState extends AppState {}
 
-abstract class AppLoadingState extends AppState {}
+class AppLoadingState extends AppState {}
 
-abstract class AppLoadedState extends AppState {}
+class AppLoadedState extends AppState {
+  final bool? isSuccessfull;
+  AppLoadedState({required this.isSuccessfull});
+}
 
-abstract class AppErrorState extends AppState {}
+class AppErrorState extends AppState {}

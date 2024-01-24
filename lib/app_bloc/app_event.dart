@@ -1,5 +1,13 @@
 import 'package:equatable/equatable.dart';
 
-abstract class AppEvent extends Equatable {}
+abstract class AppEvent {}
 
-abstract class SignUpEvent extends AppEvent {}
+class SignUpEvent extends AppEvent {
+
+}
+
+class UploadQrEvent extends AppEvent {
+  String? title, bName, tag, qrImage;
+
+  UploadQrEvent({this.title, this.bName, this.tag, this.qrImage});
+}

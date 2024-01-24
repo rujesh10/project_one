@@ -1,10 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:project_one/screens/home_screen.dart';
 import 'package:project_one/screens/login_screen.dart';
 import 'package:project_one/screens/splash_screen.dart';
+import 'package:project_one/screens/upload_screen.dart';
 import 'package:project_one/utils/bottom_nav.dart';
 
+import 'app_bloc/app_bloc.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -21,14 +25,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // scaffoldBackgroundColor: Colors.white54,
-        primarySwatch: Colors.blue,
+    return BlocProvider(
+      create: (context) => AppBloc(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: UploadImages(),
       ),
-      home: const HomeScreen(),
     );
   }
 }

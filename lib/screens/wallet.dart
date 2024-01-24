@@ -1,9 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:project_one/screens/display_images.dart';
 import '../models/model.dart';
 
 class Wallet extends StatefulWidget {
-  const Wallet({super.key});
+  const Wallet({Key? key}) : super(key: key);
 
   @override
   State<Wallet> createState() => _WalletState();
@@ -47,22 +48,41 @@ class _WalletState extends State<Wallet> {
                     List<ImageModel> images = snapshot.data ?? [];
                     if (images.isEmpty) {
                       return Center(
-                          child: Text(
-                        "No images available",
-                        style: TextStyle(fontSize: 20),
-                      ));
+                        child: Text(
+                          "No images available",
+                          style: TextStyle(fontSize: 20),
+                        ),
+                      );
                     } else {
                       return GridView.builder(
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           crossAxisSpacing: 8.0,
                           mainAxisSpacing: 8.0,
                         ),
                         itemCount: images.length,
                         itemBuilder: (context, index) {
-                          return Padding(
-                            padding: const EdgeInsets.only(left: 10, right: 10),
-                            child: Image.network(images[index].imageUrl),
+                          return GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => DisplayImages(
+                                    herotag: "thisTag",
+                                    imageUrl: images[index].imageUrl,
+                                  ),
+                                ),
+                              );
+                            },
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 10, right: 10),
+                              child: Hero(
+                                tag: "thisTag",
+                                child: Image.network(images[index].imageUrl),
+                              ),
+                            ),
                           );
                         },
                       );
